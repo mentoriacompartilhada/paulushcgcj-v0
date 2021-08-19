@@ -1,0 +1,14 @@
+name: Automatic test on Push
+on: push
+
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    steps:      
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: test.postman_collection
+          environment: test.postman_environment
