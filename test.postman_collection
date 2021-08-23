@@ -15,8 +15,9 @@
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
+							"\r",
 							"pm.test(\"Body matches Hello World\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Hello World\");\r",
+							"    pm.expect(pm.response.text()).to.equal(\"Hello World\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -27,15 +28,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/hello",
+					"raw": "http://{{SERVER}}/api/hello",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{SERVER}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"hello"
