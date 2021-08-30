@@ -19,6 +19,7 @@ jobs:
         run: |
           java -jar target/app.jar --server.port=8888 &
           echo $! > app.pid
+          sleep 5
       - uses: matt-ball/newman-action@master
         with:
           collection: test.postman_collection
