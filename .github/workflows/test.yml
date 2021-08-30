@@ -24,3 +24,5 @@ jobs:
         with:
           collection: test.postman_collection
           environment: test.postman_environment
+          iterationCount: 1
+          delayRequest: 500
