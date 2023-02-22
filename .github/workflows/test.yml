@@ -31,7 +31,7 @@ jobs:
           environment: test.postman_environment
           iterationCount: 1
           delayRequest: 500
-          reporters: ["cli", "junit"]
+          reporters: '["cli", "junit"]'
 
       - name: Check
         run: ls -lha
