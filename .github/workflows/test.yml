@@ -32,6 +32,7 @@ jobs:
           iterationCount: 1
           delayRequest: 500
           reporters: '["cli", "junit"]'
+          reporter: '{ "junit" : { "export" : "./report.xml" } }'
 
       - name: Check
         run: ls -lha
